@@ -30,12 +30,13 @@ rm -r master.zip
 # Rename directory with the parameter and go inside the root dir
 if [ $# != 0 ]
     then
-        mv SimpleWebsiteDjango-master $1
         ROOT_DIR_NAME=$1
     else
-        ROOT_DIR_NAME=SimpleWebsiteDjango-master
+        ROOT_DIR_NAME=SimpleWebsiteDjango
 fi
+mv SimpleWebsiteDjango-master $ROOT_DIR_NAME
 cd $ROOT_DIR_NAME
+
 # Create a virtual environment and activate it
 virtualenv -p python3 env
 source env/bin/activate
