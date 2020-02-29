@@ -8,6 +8,10 @@
 # $ source install_simple.sh newname
 ####
 
+# Open GUI to choose the place of the root directory and go inside
+root_dir="$(zenity --title "Where you want to install your website?" --file-selection --directory)"
+cd $root_dir
+
 # Download zip file, unzip and remove
 wget https://github.com/JBthePenguin/SimpleWebsiteDjango/archive/master.zip
 unzip master.zip
